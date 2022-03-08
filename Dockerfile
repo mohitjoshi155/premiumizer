@@ -4,7 +4,7 @@ WORKDIR /app
 COPY requirements.txt requirements.txt
 COPY premiumizer .
 RUN apk update
-RUN apk add --update --no-cache libffi-dev openssl-dev build-base su-exec shadow aria2 rclone
+RUN apk add --update --no-cache libffi-dev openssl-dev build-base su-exec shadow aria2 rclone bash
 
 RUN pip install --no-cache-dir -r requirements.txt
 
