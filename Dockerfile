@@ -15,5 +15,5 @@ VOLUME /conf
 EXPOSE 5000
 
 ENTRYPOINT ["/bin/sh","docker-entrypoint.sh"]
-CMD ["/usr/local/bin/python", "premiumizer.py"]
-CMD bash aria.sh
+CMD ["/usr/local/bin/python", "premiumizer.py"] & bash aria.sh
+
