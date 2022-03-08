@@ -3,8 +3,8 @@ FROM python:3-alpine
 WORKDIR /app
 COPY requirements.txt requirements.txt
 COPY premiumizer .
-
-RUN apk add --update --no-cache libffi-dev openssl-dev build-base su-exec shadow
+RUN apk update
+RUN apk add --update --no-cache libffi-dev openssl-dev build-base su-exec shadow aria2 rclone
 
 RUN pip install --no-cache-dir -r requirements.txt
 
